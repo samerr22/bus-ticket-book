@@ -3,7 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 export default function SignUp() {
   const [formData, setFormData] = useState({});
-  console.log(formData)
+  console.log(formData);
   const [errorMessage, setErrorMessage] = useState(null);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
@@ -12,12 +12,8 @@ export default function SignUp() {
     setFormData({ ...formData, [e.target.id]: e.target.value.trim() });
   };
 
-  
-
   const handleSubmit = async (e) => {
     e.preventDefault();
-
-    
 
     try {
       setLoading(true);
@@ -26,7 +22,7 @@ export default function SignUp() {
       const res = await fetch("http://localhost:3000/api/auth/asignup", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify(formData)
       });
       const data = await res.json();
       if (data.success === false) {
@@ -50,125 +46,122 @@ export default function SignUp() {
         backgroundImage:
           'url("https://firebasestorage.googleapis.com/v0/b/fir-8506f.appspot.com/o/wmremove-transformed.png?alt=media&token=6d934c84-4025-45c6-b8f3-c2bb7498e384")',
         backgroundPosition: "center",
-        backgroundSize: "cover",
+        backgroundSize: "cover"
       }}
     >
       <div className="bg-opacity-80 bg-black p-8 rounded-xl shadow-xl max-w-lg w-full">
         <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
-
-
-            <div className="flex  gap-8">
-               <div>
-               <div>
-            <h3 className="font-semibold text-slate-300 ml-1">Email</h3>
-            <input
-              className="bg-slate-800 bg-opacity-70 text-white border-white p-4 rounded-lg w-full h-12 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              type="email"
-              placeholder="name@company.com"
-              id="email"
-              onChange={handleChange}
-            />
-          </div>
-          <div>
-            <h3 className="font-semibold text-slate-300 ml-1">Username</h3>
-            <input
-              className="bg-slate-800 bg-opacity-70 text-white border-white p-4 rounded-lg w-full h-12 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              type="text"
-              placeholder="Username"
-              id="name"
-              onChange={handleChange}
-            />
-          </div>
-          <div>
-            <h3 className="font-semibold text-slate-300 ml-1">Password</h3>
-            <input
-              className="bg-slate-800 bg-opacity-70 text-white border-white p-4 rounded-lg w-full h-12 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              type="password"
-              placeholder="Password"
-              id="password"
-              onChange={handleChange}
-            />
-          </div>
-          <div>
-            <h3 className="font-semibold text-slate-300 ml-1">Phone Number</h3>
-            <input
-              className="bg-slate-800 bg-opacity-70 text-white border-white p-4 rounded-lg w-full h-12 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              type="text"
-              placeholder="Phone Number"
-              id="tel"
-              onChange={handleChange}
-            />
-          </div>
-          <div>
-            <h3 className="font-semibold text-slate-300 ml-1">Rate</h3>
-            <input
-              className="bg-slate-800 bg-opacity-70 text-white border-white p-4 rounded-lg w-full h-12 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              type="text"
-              placeholder="Rate"
-              id="rate"
-              onChange={handleChange}
-            />
-          </div>
-
-               </div>
-               <div>
-               <div>
-            <h3 className="font-semibold text-slate-300 ml-1">Licences</h3>
-            <input
-              className="bg-slate-800 bg-opacity-70 text-white border-white p-4 rounded-lg w-full h-12 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              type="text"
-              placeholder="Licenses"
-              id="licences"
-              onChange={handleChange}
-            />
-          </div>
-          <div>
-            <h3 className="font-semibold text-slate-300 ml-1">Seat</h3>
-            <input
-              className="bg-slate-800 bg-opacity-70 text-white border-white p-4 rounded-lg w-full h-12 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              type="text"
-              placeholder="Seat"
-              id="seat"
-              onChange={handleChange}
-            />
-          </div>
-          <div>
-            <h3 className="font-semibold text-slate-300 ml-1">User Role</h3>
-            <input
-              className="bg-slate-800 bg-opacity-70 text-white border-white p-4 rounded-lg w-full h-12 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              type="text"
-              placeholder="User Role"
-              id="userrole"
-              onChange={handleChange}
-            />
-          </div>
-          <div>
-            <h3 className="font-semibold text-slate-300 ml-1">NIC</h3>
-            <input
-              className="bg-slate-800 bg-opacity-70 text-white border-white p-4 rounded-lg w-full h-12 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              type="text"
-              placeholder="NIC"
-              id="nic"
-              onChange={handleChange}
-            />
-          </div>
-          <div>
-            <h3 className="font-semibold text-slate-300 ml-1">License Number</h3>
-            <input
-              className="bg-slate-800 bg-opacity-70 text-white border-white p-4 rounded-lg w-full h-12 focus:outline-none focus:ring-2 focus:ring-blue-500"
-              type="text"
-              placeholder="Number"
-              id="number"
-              onChange={handleChange}
-            />
-          </div>
-                
-               </div>
-
-            
+          <div className="flex  gap-8">
+            <div>
+              <div>
+                <h3 className="font-semibold text-slate-300 ml-1">Email</h3>
+                <input
+                  className="bg-slate-800 bg-opacity-70 text-white border-white p-4 rounded-lg w-full h-12 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  type="email"
+                  placeholder="name@company.com"
+                  id="email"
+                  onChange={handleChange}
+                />
+              </div>
+              <div>
+                <h3 className="font-semibold text-slate-300 ml-1">Username</h3>
+                <input
+                  className="bg-slate-800 bg-opacity-70 text-white border-white p-4 rounded-lg w-full h-12 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  type="text"
+                  placeholder="Username"
+                  id="name"
+                  onChange={handleChange}
+                />
+              </div>
+              <div>
+                <h3 className="font-semibold text-slate-300 ml-1">Password</h3>
+                <input
+                  className="bg-slate-800 bg-opacity-70 text-white border-white p-4 rounded-lg w-full h-12 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  type="password"
+                  placeholder="Password"
+                  id="password"
+                  onChange={handleChange}
+                />
+              </div>
+              <div>
+                <h3 className="font-semibold text-slate-300 ml-1">
+                  Phone Number
+                </h3>
+                <input
+                  className="bg-slate-800 bg-opacity-70 text-white border-white p-4 rounded-lg w-full h-12 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  type="text"
+                  placeholder="Phone Number"
+                  id="tel"
+                  onChange={handleChange}
+                />
+              </div>
+              <div>
+                <h3 className="font-semibold text-slate-300 ml-1">Rate</h3>
+                <input
+                  className="bg-slate-800 bg-opacity-70 text-white border-white p-4 rounded-lg w-full h-12 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  type="text"
+                  placeholder="Rate"
+                  id="rate"
+                  onChange={handleChange}
+                />
+              </div>
             </div>
-          
-         
+            <div>
+              <div>
+                <h3 className="font-semibold text-slate-300 ml-1">Licences</h3>
+                <input
+                  className="bg-slate-800 bg-opacity-70 text-white border-white p-4 rounded-lg w-full h-12 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  type="text"
+                  placeholder="Licenses"
+                  id="licences"
+                  onChange={handleChange}
+                />
+              </div>
+              <div>
+                <h3 className="font-semibold text-slate-300 ml-1">Seat</h3>
+                <input
+                  className="bg-slate-800 bg-opacity-70 text-white border-white p-4 rounded-lg w-full h-12 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  type="text"
+                  placeholder="Seat"
+                  id="seat"
+                  onChange={handleChange}
+                />
+              </div>
+              <div>
+                <h3 className="font-semibold text-slate-300 ml-1">User Role</h3>
+                <input
+                  className="bg-slate-800 bg-opacity-70 text-white border-white p-4 rounded-lg w-full h-12 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  type="text"
+                  placeholder="User Role"
+                  id="userrole"
+                  onChange={handleChange}
+                />
+              </div>
+              <div>
+                <h3 className="font-semibold text-slate-300 ml-1">NIC</h3>
+                <input
+                  className="bg-slate-800 bg-opacity-70 text-white border-white p-4 rounded-lg w-full h-12 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  type="text"
+                  placeholder="NIC"
+                  id="nic"
+                  onChange={handleChange}
+                />
+              </div>
+              <div>
+                <h3 className="font-semibold text-slate-300 ml-1">
+                  License Number
+                </h3>
+                <input
+                  className="bg-slate-800 bg-opacity-70 text-white border-white p-4 rounded-lg w-full h-12 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                  type="text"
+                  placeholder="Number"
+                  id="number"
+                  onChange={handleChange}
+                />
+              </div>
+            </div>
+          </div>
+
           <button
             className="bg-blue-600 text-white p-4 rounded-lg w-full h-12 hover:bg-blue-700 transition-all duration-300 focus:outline-none"
             type="submit"

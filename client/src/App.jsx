@@ -10,6 +10,7 @@ import Dashboard from "./pages/dashboard";
 import SignUp from "./pages/SignUp";
 import Signin from "./pages/Signin";
 import Profile from "./pages/profile";
+import DProfile from "./pages/driverprofile";
 
 import DSignUp from "./pages/driversigup";
 import DSigin from "./pages/driversigin";
@@ -53,6 +54,7 @@ export default function App() {
 
       <Route element={<PrivateRoute />}>
       <Route path="/profile" element={<Profile />} />
+      <Route path="/Dprofile" element={< DProfile/>} />
      
 
    
