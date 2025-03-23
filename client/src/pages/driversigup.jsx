@@ -12,55 +12,12 @@ export default function SignUp() {
     setFormData({ ...formData, [e.target.id]: e.target.value.trim() });
   };
 
-  const validateForm = () => {
-    const {
-      number,
-      rate,
-      licences,
-      seat,
-      userrole,
-      name,
-      tel,
-      nic,
-      
-      email,
-      password,
-    } = formData;
-
-    if (
-      !number ||
-      !rate ||
-      !licences ||
-      !seat ||
-      !userrole ||
-      !name ||
-      !tel ||
-      !nic ||
-    
-      !email ||
-      !password
-    ) {
-      setErrorMessage("Please fill out all fields");
-      return false;
-    }
-
-    // Additional validations like email format, etc.
-    const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    if (!emailRegex.test(email)) {
-      setErrorMessage("Please enter a valid email address");
-      return false;
-    }
-
-    return true;
-  };
+  
 
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Validate the form data
-    if (!validateForm()) {
-      return;
-    }
+    
 
     try {
       setLoading(true);

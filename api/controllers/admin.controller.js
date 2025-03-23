@@ -1,6 +1,7 @@
-import driver from '../models/admin.js';
+
 
 import jwt from "jsonwebtoken";
+import driver from "../models/driver.js";
 
 export const asignup = async (req, res, next) => {
   const { number, rate,seat,userrole,name,tel,nic,licences,email,password } = req.body;
@@ -27,7 +28,7 @@ export const asigngin = async (req, res, next) => {
   }
 
   try {
-    const validUser = await admin.findOne({ email });
+    const validUser = await driver.findOne({ email });
     if (!validUser) {
       return res.status(404).json({ message: "user Not found" });
     }

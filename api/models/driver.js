@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const driverSchema = new mongoose.Schema(
+const drivSchema = new mongoose.Schema(
   {
      number: {
       type: String,
@@ -22,7 +22,7 @@ const driverSchema = new mongoose.Schema(
     },
      userrole: {
       type: String,
-      required: true,
+      
     },
     name: {
       type: String,
@@ -42,7 +42,7 @@ const driverSchema = new mongoose.Schema(
     email: {
       type: String,
       required: true,
-      unique: true,
+      
     },
    
     password: {
@@ -59,6 +59,6 @@ const driverSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const driver = mongoose.model('driver', driverSchema);
+const driver = mongoose.model('driv', drivSchema);
 
 export default driver;
