@@ -34,7 +34,7 @@ export default function DashProfile() {
    
     try {
       dispatch(updateSart());
-      const res = await fetch(`/api/auth/update/${currentUser._id}`, {
+      const res = await fetch(`/api/auth/dupdate/${currentUser._id}`, {
         method: "PUT",
         headers: {
           "Content-Type": "application/json"
@@ -66,7 +66,7 @@ export default function DashProfile() {
     if (window.confirm("Are you sure you want to delete your account? This action cannot be undone.")) {
       try {
         setDeleting(true);
-        const res = await fetch(`/api/auth/delete/${currentUser._id}`, {
+        const res = await fetch(`/api/auth/ddelete/${currentUser._id}`, {
           method: "DELETE",
         });
         const data = await res.json();
