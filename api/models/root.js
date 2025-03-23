@@ -1,6 +1,6 @@
 import mongoose from 'mongoose';
 
-const rootSchema = new mongoose.Schema(
+const RootSchema = new mongoose.Schema(
   {
      root: {
       type: String,
@@ -13,6 +13,6 @@ const rootSchema = new mongoose.Schema(
   { timestamps: true }
 );
 
-const root = mongoose.model('root', rootSchema);
+const Root = mongoose.model('Root', RootSchema);
 
-export default root;
+export default Root;

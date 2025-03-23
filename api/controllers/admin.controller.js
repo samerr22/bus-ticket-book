@@ -2,6 +2,8 @@
 
 import jwt from "jsonwebtoken";
 import driver from "../models/driver.js";
+import root from "../models/root.js";
+import Root from "../models/root.js";
 
 export const asignup = async (req, res, next) => {
   const { number, rate,seat,userrole,name,tel,nic,licences,email,password } = req.body;
@@ -121,7 +123,7 @@ export const singOut = (req, res, next) => {
 export const createroot = async (req, res, next) => {
     
   const {  root } = req.body;
-  const newroot = new driver({
+  const newroot = new  Root({
     root
   });
 
@@ -142,12 +144,12 @@ export const geteroot = async (req, res, next) => {
   try {
     
 
-      const root = await driver.find();
+      const root = await Root.find();
 
       if (root.length > 0) {
         res.json({
           message: " details retrieved successfully",
-          Empp,
+          root,
         });
       } else {
         return next(error(404, " not fonud "));
