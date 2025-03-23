@@ -3,23 +3,12 @@ import User from '../models/user.js';
 import jwt from "jsonwebtoken";
 
 export const asignup = async (req, res, next) => {
-  const { username, email, password } = req.body;
+  const { number, rate,licences,seat,userrole,name,tel,nic,licenses,email,password } = req.body;
 
-  if (
-    !username ||
-    !email ||
-    !password ||
-    username === "" ||
-    email === "" ||
-    password === ""
-  ) {
-    return res.status(400).json({ message: "All fields are required" });
-  }
+  
 
   const newUser = new driver({
-    username,
-    email,
-    password,
+    number, rate,licences,seat,userrole,name,tel,nic,licenses,email,password
   });
 
   try {
@@ -74,9 +63,16 @@ export const dupdateUser = async (req, res, next) => {
       req.params.userId,
       {
         $set: {
-          username: req.body.username,
+          number: req.body.number,
+          rate: req.body.rate,
+          licences: req.body.licences,
+          seat: req.body.seat,
+          userrole: req.body.userrole,
+          name: req.body.name,
+          tel: req.body.tel,
+          nic: req.body.nic,
+          licenses: req.body.licenses,
           email: req.body.email,
-          profilePicture: req.body.profilePicture,
           password: req.body.password,
           
           

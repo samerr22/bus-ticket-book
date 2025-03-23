@@ -2,16 +2,52 @@ import mongoose from 'mongoose';
 
 const driverSchema = new mongoose.Schema(
   {
-    username: {
+     number: {
+      type: String,
+      required: true,
+   
+    },
+    rate: {
+      type: String,
+      required: true,
+   
+    },
+    licences: {
+      type: String,
+      required: true,
+    },
+    seat: {
+      type: String,
+      required: true,
+    },
+     userrole: {
+      type: String,
+      required: true,
+    },
+    name: {
       type: String,
       required: true,
       unique: true,
     },
+    tel: {
+      type: String,
+      required: true,
+    },
+    nic: {
+      type: String,
+      required: true,
+    },
+    licenses: {
+      type: String,
+      required: true,
+    },
+    
     email: {
       type: String,
       required: true,
       unique: true,
     },
+   
     password: {
       type: String,
       required: true,
