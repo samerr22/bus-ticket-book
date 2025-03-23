@@ -86,6 +86,27 @@ export default function DashProfile() {
     }
   };
 
+
+
+
+  useEffect(() => {
+    const Roots = async () => {
+      try {
+        const res = await fetch(`http://localhost:3000/api/auth/get`);
+        const data = await res.json();
+        console.log(data);
+
+        if (res.ok) {
+          setroot(data);
+        }
+      } catch (error) {
+        console.log(error.message);
+      }
+    };
+    
+    Roots();
+    
+  }, []);
   return (
     <div className="min-h-screen bg-gray-900 text-white">
     {/* Background Image */}

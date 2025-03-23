@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 
 export default function SignUp() {
@@ -6,6 +6,8 @@ export default function SignUp() {
   console.log(formData);
   const [errorMessage, setErrorMessage] = useState(null);
   const [loading, setLoading] = useState(false);
+  const [root, setroot] = useState([]);
+  console.log("done", root)
   const navigate = useNavigate();
 
   const handleChange = (e) => {
@@ -38,6 +40,27 @@ export default function SignUp() {
       setLoading(false);
     }
   };
+
+
+
+  useEffect(() => {
+    const Roots = async () => {
+      try {
+        const res = await fetch(`http://localhost:3000/api/auth/get`);
+        const data = await res.json();
+        console.log(data);
+
+        if (res.ok) {
+          setroot(data);
+        }
+      } catch (error) {
+        console.log(error.message);
+      }
+    };
+    
+    Roots();
+    
+  }, []);
 
   return (
     <div
