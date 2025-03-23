@@ -11,6 +11,9 @@ import SignUp from "./pages/SignUp";
 import Signin from "./pages/Signin";
 import Profile from "./pages/profile";
 
+import DSignUp from "./pages/driversigup";
+import DSigin from "./pages/driversigin";
+
 
 
 
@@ -42,7 +45,10 @@ export default function App() {
 
 
       <Route path="/sign" element={<Signin />} />
+      <Route path="/dsign" element={<DSigin />} />
+
       <Route path="/sign-up" element={<SignUp />} />
+      <Route path="/dsign-up" element={<DSignUp />} />
 
 
       <Route element={<PrivateRoute />}>

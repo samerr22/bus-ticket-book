@@ -83,6 +83,17 @@ export default function SignUp() {
             onChange={handlchange}
           />
         </div>
+        <div>
+          <h3 className="font-semibold text-slate-300 ml-1">telephone</h3>
+          <input
+            className="bg-slate-800 bg-opacity-70 text-white border-white p-4 rounded-lg w-full h-12 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            type="text"
+            placeholder="telephone"
+            id="telephone"
+            onChange={handlchange}
+          />
+        </div>
+        
         <button
           className="bg-blue-600 text-white p-4 rounded-lg w-full h-12 hover:bg-blue-700 transition-all duration-300 focus:outline-none"
           type="submit"

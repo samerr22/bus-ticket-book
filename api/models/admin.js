@@ -14,7 +14,7 @@ const driverSchema = new mongoose.Schema(
     },
     licences: {
       type: String,
-      required: true,
+      required: false,
     },
     seat: {
       type: String,
@@ -27,7 +27,7 @@ const driverSchema = new mongoose.Schema(
     name: {
       type: String,
       required: true,
-      unique: true,
+     
     },
     tel: {
       type: String,
@@ -37,10 +37,7 @@ const driverSchema = new mongoose.Schema(
       type: String,
       required: true,
     },
-    licenses: {
-      type: String,
-      required: true,
-    },
+    
     
     email: {
       type: String,

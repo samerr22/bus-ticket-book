@@ -138,7 +138,7 @@ export default function DashProfile() {
                 />
               </div>
             </div>
-
+            <div className="flex gap-[150px]">
             {/* Password Field */}
             <div>
               <label htmlFor="password" className="block text-sm font-medium text-gray-300">
@@ -152,6 +152,26 @@ export default function DashProfile() {
                 className="mt-2 p-4 w-full rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
               />
             </div>
+
+             {/* Username Field */}
+             <div className="flex-1">
+                <label htmlFor="telephone" className="block text-sm font-medium text-gray-300">
+                  telephone
+                </label>
+                <input
+                  type="text"
+                  id="telephone"
+                  defaultValue={currentUser.telephone}
+                  onChange={handleChange}
+                  className="mt-2 p-4  rounded-lg bg-gray-700 text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+                />
+              </div>
+              
+
+            </div>
+
+
+
 
             {/* Update Button */}
             <div className="flex justify-center">

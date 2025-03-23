@@ -2,23 +2,15 @@ import User from '../models/user.js';
 import jwt from "jsonwebtoken";
 
 export const signup = async (req, res, next) => {
-  const { username, email, password } = req.body;
+  const { username, email, password, telephone } = req.body;
 
-  if (
-    !username ||
-    !email ||
-    !password ||
-    username === "" ||
-    email === "" ||
-    password === ""
-  ) {
-    return res.status(400).json({ message: "All fields are required" });
-  }
+ 
 
   const newUser = new User({
     username,
     email,
     password,
+    telephone
   });
 
   try {
@@ -73,6 +65,7 @@ export const updateUser = async (req, res, next) => {
         $set: {
           username: req.body.username,
           email: req.body.email,
+          telephone: req.body.telephone,
           profilePicture: req.body.profilePicture,
           password: req.body.password,
           

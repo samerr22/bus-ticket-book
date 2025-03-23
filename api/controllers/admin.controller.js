@@ -1,14 +1,14 @@
 import driver from '../models/admin.js';
-import User from '../models/user.js';
+
 import jwt from "jsonwebtoken";
 
 export const asignup = async (req, res, next) => {
-  const { number, rate,licences,seat,userrole,name,tel,nic,licenses,email,password } = req.body;
+  const { number, rate,seat,userrole,name,tel,nic,licences,email,password } = req.body;
 
   
 
   const newUser = new driver({
-    number, rate,licences,seat,userrole,name,tel,nic,licenses,email,password
+    number, rate,seat,userrole,name,tel,nic,licences,email,password
   });
 
   try {
