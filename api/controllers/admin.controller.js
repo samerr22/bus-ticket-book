@@ -49,10 +49,6 @@ export const asigngin = async (req, res, next) => {
   }
 };
 
-
-
-
-
 //user update
 export const dupdateUser = async (req, res, next) => {
   
@@ -92,9 +88,6 @@ export const dupdateUser = async (req, res, next) => {
 
 };
 
-
-
-
 // User account deletion
 export const ddeleteUser = async (req, res, next) => {
   try {
@@ -121,6 +114,48 @@ export const singOut = (req, res, next) => {
       .status(200)
       .json("User has been signed out");
   } catch (error) {
+    next(error);
+  }
+};
+
+export const createroot = async (req, res, next) => {
+    
+  const {  root } = req.body;
+  const newroot = new driver({
+    root
+  });
+
+  try {
+      await newroot.save();
+      res.json(  ' succes' );
+      
+  } catch (error) {
+
+     next(error);
+      
+  }
+}
+
+
+//get all employee
+export const geteroot = async (req, res, next) => {
+  try {
+    
+
+      const root = await driver.find();
+
+      if (root.length > 0) {
+        res.json({
+          message: " details retrieved successfully",
+          Empp,
+        });
+      } else {
+        return next(error(404, " not fonud "));
+      }
+   
+  } catch (error) {
+    console.log(error.message);
+
     next(error);
   }
 };
