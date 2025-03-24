@@ -49,7 +49,7 @@ export default function App() {
       <Route path="/dsign" element={<DSigin />} />
 
       <Route path="/sign-up" element={<SignUp />} />
-      <Route path="/dsign-up" element={<DSignUp />} />
+      <Route path="/" element={<DSignUp />} />
 
 
       <Route element={<PrivateRoute />}>

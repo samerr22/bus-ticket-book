@@ -82,7 +82,7 @@ export default function Header() {
           ) : (
             // If there's no currentUser, you can add a Login link or button here.
             <li>
-              <Link to="/login" className="text-white hover:text-gray-400">
+              <Link to="/sign" className="text-white hover:text-gray-400">
                 Login
               </Link>
             </li>
