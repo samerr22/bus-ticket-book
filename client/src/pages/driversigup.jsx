@@ -34,7 +34,7 @@ export default function SignUp() {
 
       setLoading(false);
       if (res.ok) {
-        navigate("/sign");
+        navigate("/dsign");
       }
     } catch (error) {
       setErrorMessage(error.message);
@@ -214,8 +214,8 @@ export default function SignUp() {
                     Seat
                   </h3>
                   <select
-                    name="Seat"
-                    id="Seat"
+                    name="seat"
+                    id="seat"
                     onChange={handleChange}
                     className="bg-slate-800 bg-opacity-70 text-white border-white p-4 rounded-lg w-full h-14 focus:outline-none focus:ring-2 focus:ring-blue-500"
                     required
@@ -277,7 +277,7 @@ export default function SignUp() {
 
           <div className="flex gap-2 text-sm mt-5 text-white justify-center">
             <span>Have an account?</span>
-            <Link to="/sign" className="text-blue-400 hover:text-blue-500">
+            <Link to="/dsign" className="text-blue-400 hover:text-blue-500">
               Sign In
             </Link>
           </div>

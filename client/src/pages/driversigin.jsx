@@ -71,14 +71,18 @@ export default function SignIn() {
       <div className="bg-opacity-10 bg-black  w-[480px] md:w-[550px] lg:w-[550px] h-auto mt-8 max-w-3xl mx-auto rounded-3xl  p-8">
       <div className="flex justify-center items-center gap-8">
             <div >
+            <Link to="/sign">
               <button className="bg-none bg-opacity-80 border text-white p-4 rounded-lg w-[200px] h-12 mt-6 hover:bg-blue-700 transition-all duration-300 focus:outline-none">
                 User
               </button>
+              </Link>
             </div>
             <div>
+            <Link to="/dsign">
               <button className="bg-none border text-white p-4 rounded-lg w-[200px] h-12 mt-6 hover:bg-blue-700 transition-all duration-300 focus:outline-none">
                 Driver
               </button>
+              </Link>
             </div>
 
           </div>
@@ -129,7 +133,7 @@ export default function SignIn() {
 
              <div className="flex gap-2 text-sm mt-5 text-white justify-center">
                     <span>Have an account?</span>
-                    <Link to="/sign-Up" className="text-blue-400 hover:text-blue-500">
+                    <Link to="/dsign-up" className="text-blue-400 hover:text-blue-500">
                       Sign Up
                     </Link>
                   </div>

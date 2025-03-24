@@ -92,15 +92,15 @@ export default function DashProfile() {
     <div
       className="relative min-h-screen bg-cover bg-center"
       style={{
-        backgroundImage: "url('https://firebasestorage.googleapis.com/v0/b/fir-8506f.appspot.com/o/wmremove-transformed%20(4).png?alt=media&token=72885aee-4fbb-4a49-8b8c-ca8def6d1ff9')",
+        backgroundImage: "url('https://images.pexels.com/photos/981588/pexels-photo-981588.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2')",
       }}
     >
      
 
       <div className="flex justify-center items-center min-h-screen relative z-10">
-        <div className="bg-opacity-80 bg-gray-800 p-8 rounded-xl shadow-lg max-w-3xl w-full">
+        <div className="  p-8 rounded-xl shadow-lg max-w-3xl w-full">
           <div className="text-center mb-6">
-            <h2 className="text-3xl font-semibold text-yellow-400">User Profile</h2>
+            <h2 className="text-3xl font-semibold text-blue-950">User Profile</h2>
           </div>
           
                     <Link to={`/dash`} className="text-md text-gray-400 mb-6 hover:text-blue-400 underline flex items-center">
@@ -112,7 +112,7 @@ export default function DashProfile() {
             <div className="flex gap-6">
               {/* Username Field */}
               <div className="flex-1">
-                <label htmlFor="username" className="block text-sm font-medium text-gray-300">
+                <label htmlFor="username" className="block text-sm font-medium text-blue-950">
                   Username
                 </label>
                 <input
@@ -126,7 +126,7 @@ export default function DashProfile() {
               
               {/* Email Field */}
               <div className="flex-1">
-                <label htmlFor="email" className="block text-sm font-medium text-gray-300">
+                <label htmlFor="email" className="block text-sm font-medium text-blue-950">
                   Email
                 </label>
                 <input
@@ -141,7 +141,7 @@ export default function DashProfile() {
             <div className="flex gap-[150px]">
             {/* Password Field */}
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-gray-300">
+              <label htmlFor="password" className="block text-sm font-medium text-blue-950">
                 Password
               </label>
               <input
@@ -155,7 +155,7 @@ export default function DashProfile() {
 
              {/* Username Field */}
              <div className="flex-1">
-                <label htmlFor="telephone" className="block text-sm font-medium text-gray-300">
+                <label htmlFor="telephone" className="block text-sm font-medium text-blue-950">
                   telephone
                 </label>
                 <input

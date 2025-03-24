@@ -10,7 +10,7 @@ export default function BusTicketDashboard() {
       {/* Centered Content */}
       <div className="relative z-10 flex items-center justify-center h-full">
         <div className="space-y-6 text-center max-w-7xl w-full px-6">
-          <h1 className="text-4xl font-extrabold mt-[-180px] text-white mb-10">Highway Bus Ticket Management</h1>
+          <h1 className="text-4xl font-extrabold mt-[-180px] text-white mb-10">Driver Dashboard</h1>
 
           {/* Welcome Message */}
           <p className="text-lg text-white mb-10">Manage your bus tickets, routes, schedules, and more efficiently.</p>
@@ -45,7 +45,7 @@ export default function BusTicketDashboard() {
             <Link to={`/profile`}>
               <button className="flex items-center justify-between w-full sm:w-60 p-4 bg-gradient-to-r from-purple-700 via-purple-800 to-black text-white rounded-lg shadow-lg hover:shadow-2xl hover:scale-110 transform transition duration-300 ease-in-out hover:ring-2 hover:ring-white hover:ring-opacity-50">
                 <FaUsers className="text-2xl" />
-                <span className="ml-3 text-lg">Passenger Details</span>
+                <span className="ml-3 text-lg">Driver Detials Details</span>
               </button>
             </Link>
 
