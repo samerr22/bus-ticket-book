@@ -1,5 +1,5 @@
 import { Spinner,  } from "flowbite-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {  Link, useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -21,6 +21,8 @@ export default function SignIn() {
 
 
   };
+
+
 
   
 
@@ -58,7 +60,7 @@ export default function SignIn() {
     <div className="relative h-[800px]">
   {/* Background Image with Dark Overlay */}
   <img
-    src="https://firebasestorage.googleapis.com/v0/b/fir-8506f.appspot.com/o/wmremove-transformed.png?alt=media&token=6d934c84-4025-45c6-b8f3-c2bb7498e384"
+    src="https://images.pexels.com/photos/28298688/pexels-photo-28298688/free-photo-of-a-toy-yellow-vw-bus-on-a-rock.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
     alt="Background Image"
     className="w-full h-full object-cover"
   />
@@ -68,9 +70,29 @@ export default function SignIn() {
      
 
       {/* Form Container */}
-      <div className="bg-opacity-80 bg-black w-[480px] md:w-[550px] lg:w-[550px] h-auto mt-8 max-w-3xl mx-auto rounded-3xl  p-8">
+      <div className=" bg-black bg-opacity-10 w-[480px] md:w-[550px] lg:w-[550px] h-auto mt-8 max-w-3xl mx-auto rounded-3xl  p-8">
+      <div className="flex justify-center items-center gap-8">
+            <div >
+              <Link to="/sign">
+              <button className="bg-none bg-opacity-80 border text-white p-4 rounded-lg w-[200px] h-12 mt-6 hover:bg-blue-700 transition-all duration-300 focus:outline-none">
+                User
+              </button>
+              </Link>
+            </div>
+            <div>
+              <Link to="/dsign">
+              <button className="bg-none border text-white p-4 rounded-lg w-[200px] h-12 mt-6 hover:bg-blue-700 transition-all duration-300 focus:outline-none">
+                Driver
+              </button>
+              </Link>
+            </div>
+
+          </div>
         <div className="flex justify-center items-center">
           <div className=" w-full">
+          <div className="mb-4 mt-4 font-serif flex justify-center items-center text-xl">
+              <h1>User</h1>
+            </div>
             <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
               {/* Email Input */}
               <div>
@@ -119,7 +141,7 @@ export default function SignIn() {
 
             {/* Error Message */}
             {errorMessage && (
-              <p className="mt-5 text-red-600 bg-red-200 p-4 rounded-lg text-center">
+              <p className="mt-5 text-red-600 bg-red-200 bg-opacity-60 p-4 rounded-lg text-center">
                 {errorMessage}
               </p>
             )}

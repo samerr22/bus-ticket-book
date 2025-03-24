@@ -8,6 +8,9 @@ export default function SignUp() {
   const [errorMessage, setErrorMessage] = useState(null);
   const [loading, setLoading] = useState(false);
   const navigate = useNavigate();
+  const [validation, setValidation] = useState(null);
+
+  console.log(validation)
  
   
 
@@ -45,21 +48,39 @@ export default function SignUp() {
   };
 
 
+
+  //validation
+  const handlePhoneNumberChange = (e) => {
+    const telephone = e.target.value.trim();
+    const phonePattern =
+      /^[\+]?[0-9]{1,4}[\s\-]?[0-9]{1,4}[\s\-]?[0-9]{1,4}[\s\-]?[0-9]{1,4}$/; // Pattern for phone numbers
+
+    if (telephone === "") {
+      setValidation(null);
+    } else if (!phonePattern.test(telephone)) {
+      setValidation(" valid phone number");
+    } else {
+      setFormData({ ...formData, telephone });
+      setValidation(null);
+    }
+  };
+
+
  
 
   return (
     <div
     className="min-h-screen bg-cover bg-center flex items-center justify-center"
     style={{
-      backgroundImage: 'url("https://firebasestorage.googleapis.com/v0/b/fir-8506f.appspot.com/o/wmremove-transformed.png?alt=media&token=6d934c84-4025-45c6-b8f3-c2bb7498e384',
+      backgroundImage: 'url("https://images.pexels.com/photos/386009/pexels-photo-386009.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
       backgroundPosition: 'center',
       backgroundSize: 'cover',
     }}
   >
-    <div className="bg-opacity-80 bg-black p-8 rounded-xl shadow-xl max-w-lg w-full">
+    <div className="bg-opacity-80 bg-none p-8 rounded-xl shadow-xl max-w-lg w-full">
       <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
         <div>
-          <h3 className="font-semibold text-slate-300 ml-1">Email</h3>
+          <h3 className="font-semibold ml-1 text-slate-950">Email</h3>
           <input
             className="bg-slate-800 bg-opacity-70 text-white border-white p-4 rounded-lg w-full h-12 focus:outline-none focus:ring-2 focus:ring-blue-500"
             type="email"
@@ -69,7 +90,7 @@ export default function SignUp() {
           />
         </div>
         <div>
-          <h3 className="font-semibold text-slate-300 ml-1">Username</h3>
+          <h3 className="font-semibold text-slate-950 ml-1">Username</h3>
           <input
             className="bg-slate-800 bg-opacity-70 text-white border-white p-4 rounded-lg w-full h-12 focus:outline-none focus:ring-2 focus:ring-blue-500"
             type="text"
@@ -79,7 +100,7 @@ export default function SignUp() {
           />
         </div>
         <div>
-          <h3 className="font-semibold text-slate-300 ml-1">Password</h3>
+          <h3 className="font-semibold text-slate-950 text-slate-300 ml-1">Password</h3>
           <input
             className="bg-slate-800 bg-opacity-70 text-white border-white p-4 rounded-lg w-full h-12 focus:outline-none focus:ring-2 focus:ring-blue-500"
             type="password"
@@ -89,14 +110,24 @@ export default function SignUp() {
           />
         </div>
         <div>
-          <h3 className="font-semibold text-slate-300 ml-1">telephone</h3>
+          <h3 className="font-semibold text-slate-950  ml-1">Telephone</h3>
           <input
             className="bg-slate-800 bg-opacity-70 text-white border-white p-4 rounded-lg w-full h-12 focus:outline-none focus:ring-2 focus:ring-blue-500"
             type="text"
             placeholder="telephone"
             id="telephone"
-            onChange={handlchange}
+            maxLength={10}
+            onChange={handlePhoneNumberChange}
           />
+           <div className="mt-[4px]">
+                    {validation && (
+                      <p className=" text-red-700 bg-white opacity-90    text-sm    rounded-lg text-center ">
+                        {validation}
+                      </p>
+                     
+                    )}
+                    
+                  </div>
         </div>
         
         <button
