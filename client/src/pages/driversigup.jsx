@@ -360,7 +360,7 @@ export default function SignUp() {
       <div className="ml-16">
 
 
-        <div className="text-white font-serif text-xl">
+        <div className="text-gray-950 font-serif text-xl">
          Registration Available Root
         </div>
         <div className="flex justify-center mt-8">

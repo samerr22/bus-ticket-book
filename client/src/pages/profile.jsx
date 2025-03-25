@@ -112,7 +112,7 @@ export default function DashProfile() {
             <div className="flex gap-6">
               {/* Username Field */}
               <div className="flex-1">
-                <label htmlFor="username" className="block text-sm font-medium text-blue-950">
+                <label htmlFor="username" className="block text-sm font-medium text-black">
                   Username
                 </label>
                 <input
@@ -126,7 +126,7 @@ export default function DashProfile() {
               
               {/* Email Field */}
               <div className="flex-1">
-                <label htmlFor="email" className="block text-sm font-medium text-blue-950">
+                <label htmlFor="email" className="block text-sm font-medium text-black">
                   Email
                 </label>
                 <input
@@ -141,7 +141,7 @@ export default function DashProfile() {
             <div className="flex gap-[150px]">
             {/* Password Field */}
             <div>
-              <label htmlFor="password" className="block text-sm font-medium text-blue-950">
+              <label htmlFor="password" className="block text-sm font-medium text-black">
                 Password
               </label>
               <input
@@ -155,7 +155,7 @@ export default function DashProfile() {
 
              {/* Username Field */}
              <div className="flex-1">
-                <label htmlFor="telephone" className="block text-sm font-medium text-blue-950">
+                <label htmlFor="telephone" className="block text-sm font-medium text-black">
                   telephone
                 </label>
                 <input

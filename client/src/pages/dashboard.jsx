@@ -21,7 +21,7 @@ export default function BusTicketDashboard() {
             <Link to={``}>
               <button className="flex items-center justify-between w-full sm:w-60 p-4 bg-gradient-to-r from-blue-700 via-blue-800 to-black text-white rounded-lg shadow-lg hover:shadow-2xl hover:scale-110 transform transition duration-300 ease-in-out hover:ring-2 hover:ring-white hover:ring-opacity-50">
                 <FaTicketAlt className="text-2xl" />
-                <span className="ml-3 text-lg">Book Ticket</span>
+                <span className="ml-3 text-lg">Seat Booking</span>
               </button>
             </Link>
 
@@ -29,7 +29,7 @@ export default function BusTicketDashboard() {
             <Link to={``}>
               <button className="flex items-center justify-between w-full sm:w-60 p-4 bg-gradient-to-r from-green-700 via-green-800 to-black text-white rounded-lg shadow-lg hover:shadow-2xl hover:scale-110 transform transition duration-300 ease-in-out hover:ring-2 hover:ring-white hover:ring-opacity-50">
                 <FaRoute className="text-2xl" />
-                <span className="ml-3 text-lg">Manage Routes</span>
+                <span className="ml-3 text-lg">Bus Tracking</span>
               </button>
             </Link>
 
@@ -37,7 +37,7 @@ export default function BusTicketDashboard() {
             <Link to={``}>
               <button className="flex items-center justify-between w-full sm:w-60 p-4 bg-gradient-to-r from-yellow-700 via-yellow-800 to-black text-white rounded-lg shadow-lg hover:shadow-2xl hover:scale-110 transform transition duration-300 ease-in-out hover:ring-2 hover:ring-white hover:ring-opacity-50">
                 <FaCalendarAlt className="text-2xl" />
-                <span className="ml-3 text-lg">View Schedule</span>
+                <span className="ml-3 text-lg">Faq</span>
               </button>
             </Link>
 
@@ -53,7 +53,7 @@ export default function BusTicketDashboard() {
             <Link to={`/reports`}>
               <button className="flex items-center justify-between w-full sm:w-60 p-4 bg-gradient-to-r from-red-700 via-red-800 to-black text-white rounded-lg shadow-lg hover:shadow-2xl hover:scale-110 transform transition duration-300 ease-in-out hover:ring-2 hover:ring-white hover:ring-opacity-50">
                 <FaBus className="text-2xl" />
-                <span className="ml-3 text-lg">Reports</span>
+                <span className="ml-3 text-lg">Admin</span>
               </button>
             </Link>
           </div>

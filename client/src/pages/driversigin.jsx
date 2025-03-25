@@ -72,14 +72,14 @@ export default function SignIn() {
       <div className="flex justify-center items-center gap-8">
             <div >
             <Link to="/sign">
-              <button className="bg-none bg-opacity-80 border text-white p-4 rounded-lg w-[200px] h-12 mt-6 hover:bg-blue-700 transition-all duration-300 focus:outline-none">
+              <button className="bg-blue-600 bg-opacity-80 border text-white p-4 rounded-lg w-[200px] h-12 mt-6 hover:bg-blue-700 transition-all duration-300 focus:outline-none">
                 User
               </button>
               </Link>
             </div>
             <div>
             <Link to="/dsign">
-              <button className="bg-none border text-white p-4 rounded-lg w-[200px] h-12 mt-6 hover:bg-blue-700 transition-all duration-300 focus:outline-none">
+              <button className="bg-blue-600 border text-white p-4 rounded-lg w-[200px] h-12 mt-6 hover:bg-blue-700 transition-all duration-300 focus:outline-none">
                 Driver
               </button>
               </Link>
@@ -95,7 +95,7 @@ export default function SignIn() {
             <form className="flex flex-col gap-6" onSubmit={handleSubmit}>
               {/* Email Input */}
               <div>
-                <h3 className="font-semibold text-gray-200 ml-1">Email</h3>
+                <h3 className="font-semibold text-gray-950 ml-1">Email</h3>
                 <input
                   className="bg-slate-800 bg-opacity-70 border-white p-4 border-opacity-50 rounded-lg w-full h-12 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
                   type="email"
@@ -107,7 +107,7 @@ export default function SignIn() {
 
               {/* Password Input */}
               <div>
-                <h3 className="font-semibold text-gray-200 opacity-70 ml-1">Password</h3>
+                <h3 className="font-semibold text-gray-950 opacity-70 ml-1">Password</h3>
                 <input
                   className="bg-slate-800 bg-opacity-70 border-white p-4 border-opacity-50 rounded-lg w-full h-12 text-white focus:outline-none focus:ring-2 focus:ring-blue-500"
                   type="password"
