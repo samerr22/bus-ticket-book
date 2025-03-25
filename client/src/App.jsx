@@ -12,6 +12,7 @@ import Signin from "./pages/Signin";
 import Profile from "./pages/profile";
 import DProfile from "./pages/driverprofile";
 
+
 import DSignUp from "./pages/driversigup";
 import DSigin from "./pages/driversigin";
 
@@ -25,7 +26,7 @@ import DSigin from "./pages/driversigin";
 
 
 
-import Admins from "./pages/admin";
+
 
 
 
@@ -67,7 +68,7 @@ export default function App() {
        
         </Route>
 
-        <Route path="/admin" element={<Admins />} />
+      
        
      
       </Routes>

@@ -48,7 +48,7 @@ export default function SignIn() {
       }
 
       dispatch(signInSuccess(data));
-      navigate("/dash");
+      navigate("/Dprofile");
     } catch (error) {
       dispatch(signInFailure("An error occurred. Please try again."));
     }
@@ -58,7 +58,7 @@ export default function SignIn() {
     <div className="relative h-[800px]">
   {/* Background Image with Dark Overlay */}
   <img
-    src="https://images.pexels.com/photos/28298688/pexels-photo-28298688/free-photo-of-a-toy-yellow-vw-bus-on-a-rock.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+    src="https://firebasestorage.googleapis.com/v0/b/fir-8506f.appspot.com/o/traffic-vehicle-urban-reflections-city.jpg?alt=media&token=f6462f17-8cbf-4415-9c15-733f702bc511"
     alt="Background Image"
     className="w-full h-full object-cover"
   />

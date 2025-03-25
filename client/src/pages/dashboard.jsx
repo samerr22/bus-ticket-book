@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 
 export default function BusTicketDashboard() {
   return (
-    <div className="relative w-full h-screen bg-cover bg-center" style={{ backgroundImage: 'url(https://images.pexels.com/photos/981588/pexels-photo-981588.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2)' }}>
+    <div className="relative w-full h-screen bg-cover bg-center" style={{ backgroundImage: 'url(https://firebasestorage.googleapis.com/v0/b/fir-8506f.appspot.com/o/traffic-vehicle-urban-reflections-city.jpg?alt=media&token=f6462f17-8cbf-4415-9c15-733f702bc511)' }}>
       {/* Overlay for better text visibility */}
       <div className="absolute inset-0 bg-black opacity-40"></div>
 

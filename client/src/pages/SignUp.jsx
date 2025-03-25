@@ -72,7 +72,7 @@ export default function SignUp() {
     <div
     className="min-h-screen bg-cover bg-center flex items-center justify-center"
     style={{
-      backgroundImage: 'url("https://images.pexels.com/photos/386009/pexels-photo-386009.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2',
+      backgroundImage: 'url("https://firebasestorage.googleapis.com/v0/b/fir-8506f.appspot.com/o/traffic-vehicle-urban-reflections-city.jpg?alt=media&token=f6462f17-8cbf-4415-9c15-733f702bc511',
       backgroundPosition: 'center',
       backgroundSize: 'cover',
     }}

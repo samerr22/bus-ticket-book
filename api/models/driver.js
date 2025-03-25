@@ -30,7 +30,7 @@ const drivSchema = new mongoose.Schema(
      
     },
     tel: {
-      type: String,
+      type: Number,
       required: true,
     },
     nic: {
