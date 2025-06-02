@@ -49,11 +49,10 @@ export default function App() {
       <Route path="/sign" element={<Signin />} />
       <Route path="/dsign" element={<DSigin />} />
 
-      <Route path="/sign-up" element={<SignUp />} />
-      <Route path="/" element={<DSignUp />} />
+   
 
 
-      <Route element={<PrivateRoute />}>
+     
       <Route path="/profile" element={<Profile />} />
       <Route path="/Dprofile" element={< DProfile/>} />
      
@@ -65,8 +64,7 @@ export default function App() {
         
 
 
-       
-        </Route>
+   
 
       
        
