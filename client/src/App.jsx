@@ -53,7 +53,7 @@ export default function App() {
 
      
       <Route path="/profile" element={<Profile />} />
-      <Route path="/Dprofile" element={< DProfile/>} />
+     
      
 
 
