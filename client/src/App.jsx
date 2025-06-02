@@ -56,9 +56,6 @@ export default function App() {
       <Route path="/Dprofile" element={< DProfile/>} />
      
 
-   
-        <Route path="/dash" element={<Dashboard />} />
-
 
         
 
